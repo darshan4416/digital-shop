@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%load custom_filter%}
+{%block title%}shop{%endblock%}
+{%block content%}
+<div class="container">
+    <div class="row mx-auto">
+        {%for product in products%}
+        <div class="col-4 p-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{product.thumbnail.url}}" class="card-img-top" alt="...">
+                <hr>
+                <div class="card-body p-0 mx-auto">
+                    <h4>{{product.name | title}}</h4>
+                    <hr>
+                    <h5 class="text text-danger p-0">Save: {{product.discount}}%</h5>
+                    <h5>Price:
+                        <del>{{product.price| rupee}}</del>
+                        {{product|sale_price | rupee}}
+                    </h5>
+                </div>
+                <div class="card-footer p-0">
+                    <a href="/product/{{product.id}}" class="btn btn-light btn-block">Show more</a>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}

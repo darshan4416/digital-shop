@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block title%}login{%endblock%}
+{%block content%}
+<div class="container mt-3 ">
+
+    <div class="col-lg-5 col-md-8 mx-auto  p-5 ui segment">
+        <h1>Login</h1>
+        <hr>
+        <div class="ui warning message" id="message" {%if not error %}hidden="true"{%endif%}>
+            {{error}}
+        </div>
+        <form class="ui form"  action="/login/" method="POST">
+            {%csrf_token%}
+        <div class="field">
+            <label>Email</label>
+            <input type="text"  name="email" placeholder="example@gmail.com">
+        </div>
+         <div class="field">
+            <label>Password</label>
+            <input type="text"  name="password" placeholder="********">
+        </div>
+
+        <button class="ui button teal btn-block" type="submit">Login</button>
+    </form>
+    </div>
+</div>
+{%endblock%}

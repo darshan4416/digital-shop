@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block title%}login{%endblock%}
+{%block content%}
+<div class="p-4 m-4 text-center">
+    <div class="jumbotron bg-white border ui segment">
+         <h2>Thank you for purchasing <b>{{payment.product.name}} Course</b></h2>
+                <hr>
+                <h4>Click on the below <b>Link</b> to download</h4>
+                <a href="/download/paid/{{payment.product.id}}/" class="ui button teal">Download</a>
+                <a href="\" class="ui button teal">Go to home</a>
+    </div>
+</div>
+{%endblock%}

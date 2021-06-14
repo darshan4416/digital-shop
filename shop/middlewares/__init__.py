@@ -1,0 +1,1 @@
+from shop.middlewares import login_required
