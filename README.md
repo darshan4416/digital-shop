@@ -1,5 +1,5 @@
 # digital-shop
-Digital is a marketplace for digital products such as pdf, courses integrated with payment gateway.
+Digital Shop is a marketplace for digital products such as pdf, courses and also integrated with payment gateway.
 
 1. Authentication/Authorization
 2. Products Page
